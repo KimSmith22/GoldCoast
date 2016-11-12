@@ -1,0 +1,175 @@
+<!doctype html>
+<div class="body border1">
+<html lang = "en">
+<head>
+  <title>CLUB GOLD COAST DETROIT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid header">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href ="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Calendar</a></li>
+          <li><a href="slideshows.html">Gallery</a></li>
+          <li><a href="contact.html">Connect</a></li>
+      </ul>
+        <img class="logoSized" src="C:\Users\Kimberli\Clients\GoldCoast\images\rectangle.png" alt="rectangle">
+</div><!--end container-fluid div-->
+<div class="mainArea border2">
+  <!--slideshow 1 this is an automatic slider where the images in this slider fade into full view -->
+  <div class="container">
+  <style>
+  * {box-sizing:border-box}
+  body {font-family: Verdana,sans-serif;}
+  .mySlides {display:none}
+
+  /* Slideshow container can adjust size here */
+  .slideshow-container {
+    max-width: 660px;
+    max-height: auto;
+  }
+
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active {
+    background-color: #717171;
+  }
+
+  /* Fading animation displays each image for 9.5 seconds */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 9.5s;
+    animation-name: fade;
+    animation-duration: 9.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+  </style>
+  <body>
+  <h2>Automatic Slideshow</h2>
+  <p>Changes image every 10 seconds:</p>
+
+  <div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="C:\Users\Kimberli\Clients\GoldCoast\images\wallArt.jpg" style="width:100%">
+    <div class="text">ADD YOUR TEXT HERE</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="C:\Users\Kimberli\Clients\GoldCoast\images\wallArt.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="C:\Users\Kimberli\Clients\GoldCoast\images\wallArt.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+  </div>
+
+  </div>
+  <br>
+
+  <div class="thedots" style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex> slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 10000); // Change image every 2 seconds
+  }
+  </script>
+</div>
+</div>
+<div class="text-center border2 smallBio">
+<p class="text text-center">Established in 1975, Club Gold Coast is Detroit's premier gay club! Secure valet parking and tight security guarantee a
+  safe atmosphere as you party Detroit style. Club Gold Coast features male dancers seven days a week while Detroit's own Lady Intrigue
+  spins the beats. House Diva Crystal Harding and friends guarantee to keep the party going on Twisted Tuesdays and Freaky Fridays.
+  Reserve our VIP area which allows private seating with a full view of all the dancers; perfect for your birthday or bachelor party!
+  Our superior bar staff, and shot boys are guaranteed to quench any thirst! </p>
+</div>
+<div class="upcomingEvents text-center border2">
+  <div class="listView">
+    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=425&amp;wkst=1&amp;bgcolor=%23000000&amp;src=clubgcdetroit%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FNew_York"
+    style="border:solid 1px #777" width="480" height="425" frameborder="0" scrolling="no"></iframe>
+</div>
+</div>
+    <div class="socialMedia text-center">
+      <P class="location text-center">2971 E 7 MILE ROAD * DETROIT, MI 48234</p>
+        <p class="location text-center">313-366-6135</P>
+      <ul class="nav navbar-nav">
+        <li><a href="#"><img class="smallimage" src="C:\Users\Kimberli\Clients\GoldCoast\images\googlePlus.png"></a>
+        <li><a href="#"><img class="smallimage" src="C:\Users\Kimberli\Clients\GoldCoast\images\linkedIn.png"></a>
+        <li><a href="#"><img class="smallimage" src="C:\Users\Kimberli\Clients\GoldCoast\images\emailIcon.png"></a>
+        <li><a href="#"><img class="smallimage" src="C:\Users\Kimberli\Clients\GoldCoast\images\shoppingCart.png"></a>
+      </ul>
+    </div>
+</body>
+</html>
+</div> <!--end outer border of site-->
