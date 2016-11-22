@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>GOLD COAST | EVENTS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Gold Coast</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li class="active"><a href="gallery.html">Gallery</a></li>
+        <li><a href="#">Connect</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="btn btn-social-icon btn-lg btn-envelope" href="mailto: clubgcdetroit@gmail.com"><span class="fa fa-envelope"></span></a></li>
+        <li><a class="btn btn-social-icon btn-lg btn-twitter" href=""><span class="fa fa-twitter"></span></a></li>
+        <li><a class="btn btn-social-icon btn-lg btn-facebook" href="https://www.facebook.com/search/211649188917739/local_search?surface=tyah"><span class="fa fa-facebook"></span></a></li>
+        <li><a class="btn btn-social-icon btn-lg btn-instagram" href=" "><span class="fa fa-instagram"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav><br>
+
+<!--pop up slideshow using lightbox -->
+<div class="row">
+  <div class="col-xs-3">
+    <img class="thumbnail mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\greenCross.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="col-xs-3">
+    <img class="thumbnail mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\fallColors.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="col-xs-3">
+    <img class="thumbnail mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\wallArt.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="col-xs-3">
+    <img class="thumbnail mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\detroitSkyline.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-3">
+    <img class="thumbnail mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\wallArt.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow">
+  </div>
+  <div class="col-xs-3">
+    <img class="thumbnail mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\detroitSkyline.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow">
+  </div>
+  <div class="col-xs-3">
+    <img class="thumbnail mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\fallColors.jpg" onclick="openModal();currentSlide(7)" class="hover-shadow">
+  </div>
+  <div class="col-xs-3">
+    <img class="thumbnail mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\greenCross.jpg" onclick="openModal();currentSlide(8)" class="hover-shadow">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 8</div>
+        <img src="images\greenCross.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 8</div>
+        <img src="images\fallColors.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 84</div>
+        <img src="images\wallArt.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 8</div>
+        <img src="images\detroitSkyline.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 8</div>
+        <img src="images\wallArt.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 8</div>
+        <img src="images\detroitSkyline.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 8</div>
+        <img src="images\fallColors.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 8</div>
+        <img src="images\greenCross.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="thumbview">
+    <div class="row">
+    <div class="col-xs-3">
+      <img class="demo mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\greenCross.jpg" onclick="currentSlide(1)" alt="Green Cross">
+    </div>
+
+    <div class="col-xs-3">
+      <img class="demo mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\fallColors.jpg" onclick="currentSlide(2)" alt="Fall Colors">
+    </div>
+
+    <div class="col-xs-3">
+      <img class="demo mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\wallArt.jpg" onclick="currentSlide(3)" alt="Wall Art">
+    </div>
+
+    <div class="col-xs-3">
+      <img class="demo mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\detroitSkyline.jpg" onclick="currentSlide(4)" alt="Detroit Skyline">
+    </div>
+  </div>
+
+  <br>
+<!--Row 2-->
+  <div class="row">
+  <div class="col-xs-3">
+    <img class="demo mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\wallArt.jpg" onclick="currentSlide(1)" alt="Wall Art">
+  </div>
+
+  <div class="col-xs-3">
+    <img class="demo mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\detroitSkyline.jpg" onclick="currentSlide(2)" alt="Detroit Skyline">
+  </div>
+
+  <div class="col-xs-3">
+    <img class="demo mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\fallColors.jpg" onclick="currentSlide(3)" alt="Fall Colors">
+  </div>
+
+  <div class="col-xs-3">
+    <img class="demo mpic" src="C:\Users\Kimberli\Clients\GoldCoast\images\greenCross.jpg" onclick="currentSlide(4)" alt="Green Cross">
+  </div>
+</div>
+
+  </div>
+</div>
+</div>
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<br />
+
+<div class="container-fluid text-center">
+  <h4><a href="http://maps.google.com/?q=2971 E. 7 Mile Rd, Detroit, MI 48234">2971 E. 7 Mile Rd  Detroit, MI  48234</h4>
+  <h5><a href="tel:1-313-336-6135">(313)336-6135</h5>
+</div>
+
+</body>
+</html>
