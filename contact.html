@@ -6,55 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="galleria/galleria-1.4.5.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="gallery.css">
 
   <script>
-  function initMap() {
-    var uluru = {lat: 42.4331013, lng:-83.0725875}; /*this is where you change the location of the business*/
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: uluru
-    });
-    var marker = new google.maps.Marker({
-      position: uluru,
-      map: map
-    });
-  }
-  </script>
-
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-
-  .carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-      min-height:200px;
-  }
-
-  body{
-    color: white;
-    background-color: black;
-  }
-  /* Hide the carousel text when the screen is less than 600 pixels wide */
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none;
-    }
-  }
-  </style>
-
+   function initMap() {
+     var uluru = {lat: 42.4331013, lng: -83.0725875};
+     var map = new google.maps.Map(document.getElementById('map'), {
+       zoom: 16,
+       center: uluru
+     });
+     var marker = new google.maps.Marker({
+       position: uluru,
+       map: map
+     });
+   }
+ </script>
+ <script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVr7-9BCbYM2yUurPuZxwgpprKyPpsaZY&callback=initMap">
+ </script>
 </head>
 <body>
 
@@ -71,9 +42,9 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li><a href="index.html">Gold Coast</a></li>
-        <li class="active"><a href="events.html">Events</a></li>
+        <li><a href="events.html">Events</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="#">Connect</a></li>
+        <li class="acitve"><a href="contact.html">Connect</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -86,16 +57,78 @@
   </div>
 </nav><br>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-6">
-<!-- form goes here -->
-    </div>
+<div class="row" style="margin-left: 50px; margin-right: 50px; margin-top: 50px;">
 
-    <div class="col-xs-6">
-<!-- margin-top goes here -->
-    </div>
+  <div class="col-xs-6">
+    <h3>Fill Out the Contact Form to Find Out How We Can Help</h3>
+    <form id="contact-form" method="post" action="contact.php" role="form">
+
+      <div class="messages"></div>
+
+      <div class="controls">
+
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_name">First Name *</label>
+                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your first name *" required="required" data-error="Firstname is required.">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_lastname">Last Name *</label>
+                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your last name *" required="required" data-error="Lastname is required.">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_email">Email *</label>
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="form_phone">Phone</label>
+                      <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="form_message">Message *</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Tell us how we can help *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+              <div class="col-md-12">
+                  <input type="submit" class="btn btn-success btn-send" value="Send message">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <p class="text-muted"><strong>*</strong> These fields are required.</a>.</p>
+              </div>
+          </div>
+      </div>
+
+  </form>
   </div>
+
+  <div class="col-xs-6">
+
+  <h3 class="text-center">Click Map for Directions to Club Gold Coast</h3>
+  <div id="map"></div>
+
+
+  </div>
+
 </div><br>
 
 <div class="container-fluid text-center">
